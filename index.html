@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ariaxa</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="nav-top">
+          <nav class="nav">
+            <div class="nav-content">
+              <div class="nav-logo">
+                <button
+                  class="btn-sidebar"
+                  type="button"
+                  onclick="showSidebar();"
+                >
+                  <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <a href="#" class="logo">
+                  <img
+                    src="/img/logo-ariaxa.svg"
+                    height="auto"
+                    width="28px"
+                    alt=""
+                /></a>
+              </div>
+              <div class="nav-mobile" id="nav-mobile">
+                <ul class="nav-bar">
+                  <div class="nav-items">
+                    <li class="nav-li active" onclick="openTab(event, 'Tab1')">
+                      <a href="#"
+                        >Tablas <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </li>
+                    <li class="nav-li" onclick="openTab(event, 'Tab2')">
+                      <a href="#"
+                        >Vistas <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </li>
+                    <li class="nav-li" onclick="openTab(event, 'Tab3')">
+                      <a href="#"
+                        >Pestañas <i class="fa-solid fa-angle-right"></i
+                      ></a>
+                    </li>
+                  </div>
+                  <li class="config">
+                    <a href=""
+                      ><i class="fa-solid fa-gear"></i> Configurar App</a
+                    >
+                  </li>
+                </ul>
+                <div class="items-right">
+                  <div class="items">
+                    <a class="app" href="#"
+                      ><i class="fa-solid fa-up-right-from-square"></i> Abrir
+                      Aplicación</a
+                    >
+                    <a class="icon-youtube" href=""
+                      ><img src="/img/youtube.png" alt="" /> Tutoriales</a
+                    >
+                    <a class="demo" href="">Demo</a>
+                    <a class="add" href=""><i class="fa-solid fa-plus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="user">
+                <a type="button" class="btn-user"
+                  ><img src="/img/user.webp" height="auto" width="30px" alt=""
+                /></a>
+                <ul class="user-bar">
+                  <li><a href="">Usuario</a></li>
+                  <li><a href="">Estado de cuenta</a></li>
+                  <li><a href="">Salir</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <button class="btn-default" onclick="showModal();">
+            <i class="fa-solid fa-plus"></i> Nueva tabla
+          </button>
+          <div class="input-group">
+            <input
+              class="search-input"
+              type="search"
+              name=""
+              id=""
+              placeholder="Buscar"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <span class="side-link">Mostrar todas las tablas</span>
+        </div>
+        <ul class="side-nav">
+          <li class="active">
+            <a href="#"><i class="fa-solid fa-address-card"></i> Perfiles</a>
+          </li>
+          <li>
+            <a href="">Cars <i></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
+          </li>
+          <li>
+            <a href="#"> <i></i> Cars</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bars-progress"></i> Projectos</a>
+          </li>
+        </ul>
+      </aside>
+      <div class="content">
+        <main class="main">
+          <section class="section section-tab" id="Tab1">
+            <div class="nav-bottom" id="nav-tabs-top">
+              <nav class="nav-tabs">
+                <ul class="navbar-tabs">
+                  <li class="active">
+                    <a href="">Campos <i></i></a>
+                  </li>
+                  <li>
+                    <a href="">Avanzado <i></i></a>
+                  </li>
+                </ul>
+                <div class="nav-tabs-item-right">
+                  <button type="button" class="btn-delete-table">
+                    Eliminar tabla <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </div>
+              </nav>
+            </div>
+            <div class="section-alert" id="section-alert">
+              <p>
+                Comienza por crear una nueva tabla. Haz clic en el botón
+                <strong>Nueva Tabla</strong> de la izquierda.
+              </p>
+            </div>
+            <div class="section-content" id="section-content">
+              <aside class="sidebar">
+                <div class="sidebar-content">
+                  <button class="btn-default" onclick="showCampo();">
+                    <i class="fa-solid fa-plus"></i> Nuevo Campo
+                  </button>
+                  <div class="input-group">
+                    <input
+                      class="search-input"
+                      type="search"
+                      name=""
+                      id=""
+                      placeholder="Buscar"
+                    />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <span class="side-link">Mostrar todos los campos</span>
+                </div>
+                <ul class="side-nav">
+                  <li class="active">
+                    <a href="#"><i class="fa-solid fa-id-badge"></i> Perfil</a>
+                  </li>
+                </ul>
+              </aside>
+              <article class="sub-main">
+                <div class="campo-alert" id="campo-alert">
+                  <p>
+                    Comienza por crear un nuevo Campo. Haz clic en el botón
+                    <strong>Nuevo Campo</strong> de la izquierda.
+                  </p>
+                </div>
+                <div class="nav-bottom" id="nav-tabs-bottom">
+                  <nav class="nav-tabs">
+                    <ul class="navbar-tabs">
+                      <li class="active">
+                        <a href="">Configuración <i></i></a>
+                      </li>
+                      <li>
+                        <a href="">Avanzado <i></i></a>
+                      </li>
+                    </ul>
+                    <div class="nav-tabs-item-right">
+                      <button type="button" class="btn-delete-table">
+                        Eliminar campo <i class="fa-solid fa-trash-can"></i>
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+                <div class="form" id="table-campo">
+                  <form action="" class="form-campo">
+                    <div class="header-form">
+                      <p>Configuración del Campo</p>
+                      <div class="header-items">
+                        <span>table-id:</span>
+                        <span>field-id:</span>
+                        <button class="btn-delete-campo" type="submit">
+                          <i class="fa-solid fa-floppy-disk"></i> Guardar
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-content">
+                      <div class="input-group-campo">
+                        <label for="">Nombre de Campo</label>
+                        <input type="text" placeholder="Perfil" />
+                      </div>
+                      <div class="input-group-campo">
+                        <label for="">Tipo de Campo</label>
+                        <input
+                          type="text"
+                          name=""
+                          placeholder="Linea de texto simple"
+                          disabled
+                        />
+                      </div>
+                      <div class="input-group-campo check">
+                        <label for="">Campo Obligatorio</label>
+                        <input class="check" type="checkbox" name="" id="" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="section-tab h-100 position-relative" id="Tab2">
+            <aside class="sidebar" id="asideView">
+              <div class="sidebar-content">
+                <button class="btn-default" onclick="showView();">
+                  <i class="fa-solid fa-plus"></i> Nueva Vista
+                </button>
+                <div class="input-group">
+                  <input
+                    class="search-input"
+                    type="search"
+                    name=""
+                    id=""
+                    placeholder="Buscar"
+                  />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <span class="side-link">Mostrar todas</span>
+              </div>
+              <ul class="side-nav ps-0">
+                <li class="active">
+                  <a href="#"
+                    ><i class="fa-solid fa-id-badge"></i> Default View-Perfiles
+                    <br /><span style="font-weight: 400; margin-left: 2.1rem"
+                      >Perfiles</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </aside>
+            <article
+              class="sub-main d-flex justify-content-center align-items-center flex-column w-100"
+            >
+              <div class="form-view m-5" id="table-message">
+                <div class="header-form p-3">
+                  <p class="m-0 fw-bold" style="color: #fff">
+                    ¿Qué es una vista?
+                  </p>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <span class="mb-2 fw-bolder"
+                      >Una vista permite personalizar la forma como se
+                      visualizan los campos de la tabla.<br />Una tabla puede
+                      tener varias vistas.<br /><br /><span
+                        class="mb-4"
+                        style="color: #000"
+                        >EJEMPLOS DE DOS VISTAS DIFERENTES DE UNA TABLA DE
+                        PROYECTOS:</span
+                      ><br
+                    /></span>
+                    <article class="d-flex justify-content-center mt-3">
+                      <img
+                        class="img-fluid"
+                        style="width: 600px"
+                        src="https://ariaxa.com/config/pics/intro/view.png"
+                      />
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-bottom" id="nav-view-tabs-top">
+                <div class="nav-tabs flex-column flex-md-row">
+                  <!-- Tabs navs -->
+                  <ul
+                    class="nav nav-tabs navbar-tabs mb-3 w-auto"
+                    id="nav-tabs"
+                    role="tablist"
+                  >
+                    <li class="li active" role="presentation">
+                      <a
+                        id="ex1-tab-1"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-1"
+                        role="tab"
+                        aria-controls="ex1-tabs-1"
+                        aria-selected="true"
+                        >Campos a mostrar</a
+                      >
+                    </li>
+                    <li class="li" role="presentation">
+                      <a
+                        id="ex1-tab-2"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-2"
+                        role="tab"
+                        aria-controls="ex1-tabs-2"
+                        aria-selected="false"
+                        >Avanzado</a
+                      >
+                    </li>
+                    <li class="li" role="presentation">
+                      <a
+                        id="ex1-tab-3"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-3"
+                        role="tab"
+                        aria-controls="ex1-tabs-3"
+                        aria-selected="false"
+                        >Previsualizar</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tabs navs -->
+                  <div class="nav-tabs-item-right">
+                    <button type="button" class="btn-delete-table">
+                      Eliminar vista <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Tabs content -->
+              <div class="tab-content w-100 h-100 p-5" id="tap-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="ex1-tabs-1"
+                  role="tabpanel"
+                  aria-labelledby="ex1-tab-1"
+                >
+                  <div class="row bg-white pt-5 pe-5">
+                    <div class="col-12 d-flex justify-content-end">
+                      <button class="btn-delete-campo" type="submit">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row bg-white p-5 pt-3">
+                    <div class="col-12 col-md-6">
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <label for="">Descripción de la vista</label>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name=""
+                            id=""
+                            value="Vista nueva"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-3 mt-md-0">
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <label for="">Título de la vista a mostrar</label>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name=""
+                            id=""
+                            value="Perfiles"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pt-3">
+                    <div class="modal-table-show p-0">
+                      <div class="modal-header bg-info">
+                        <h6 class="m-0 fw-bold">
+                          Campos a mostrar en la vista
+                        </h6>
+                        <p class="m-0">view id: <span>aswdwdwwd</span></p>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row mt-4">
+                            <div class="col-4">
+                              <label for="">Descripción de la vista</label>
+                            </div>
+                            <div class="col-8">
+                              <input type="text" class="form-control" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="ex1-tabs-2"
+                  role="tabpanel"
+                  aria-labelledby="ex1-tab-2"
+                >
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionFlushExample"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseTwo"
+                        >
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingTwo"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseThree"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseThree"
+                        >
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="ex1-tabs-3"
+                  role="tabpanel"
+                  aria-labelledby="ex1-tab-3"
+                >
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row mt-4">
+                        <div class="col-4">
+                          <label for="">Descripción de la vista</label>
+                        </div>
+                        <div class="col-8">
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tabs content -->
+            </article>
+            <div class="modal-table modal-view" id="modal-showView">
+              <div class="modal-table-show">
+                <div class="modal-header">
+                  <h4><i class="fa-solid fa-plus"></i> Nueva vista</h4>
+                  <button
+                    class="btn-header-exit"
+                    type="button"
+                    onclick="hideModalView();"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <form action="">
+                      <div class="row mt-4">
+                        <div class="col-4">
+                          <label for="">Descripción de la vista</label>
+                        </div>
+                        <div class="col-8">
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-4">
+                          <label for="">Tipo de vista</label>
+                        </div>
+                        <div class="col-8">
+                          <div
+                            class="d-flex flex-column p-3"
+                            style="background: aliceblue"
+                          >
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Vista
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault2"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                Reporte
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault3"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault3"
+                              >
+                                Calendario
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="flexRadioDefault"
+                                id="flexRadioDefault4"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexRadioDefault4"
+                              >
+                                Vista de un número
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-end mt-5">
+                        <button
+                          class="btn btn-info ms-2 me-2"
+                          type="button"
+                          onclick="hideModalView();"
+                        >
+                          Cancelar
+                        </button>
+                        <button
+                          class="btn btn-primary"
+                          type="button"
+                          onclick="showContentView();"
+                        >
+                          Enviar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              onclick="openAside();"
+              class="btn btn-light position-absolute top-50 start-0 text-black btn-view"
+            >
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </section>
+          <section class="section-tab" id="Tab3"></section>
+        </main>
+      </div>
+      <div class="modal-table" id="modal-show">
+        <div class="modal-table-show">
+          <div class="modal-header">
+            <h3><i class="fa-solid fa-plus"></i> Nueva tabla</h3>
+            <button
+              class="btn-header-exit"
+              type="button"
+              onclick="hideModal();"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <form action="">
+            <div class="form-content">
+              <div class="input-group">
+                <label for="">Nombre Tabla</label>
+                <input type="text" />
+              </div>
+              <button
+                class="btn-cancel-modal"
+                type="button"
+                onclick="hideModal();"
+              >
+                Cancelar
+              </button>
+              <button
+                class="btn-send-modal"
+                type="button"
+                onclick="showContent();"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
