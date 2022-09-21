@@ -20,7 +20,12 @@ function showContentView() {
   document.getElementById("modal-showView").classList.toggle("show");
   document.getElementById("tap-content").style.display = "block";
 }
-
+function showCampo() {
+  document.querySelector(".sub-main").style.display = "block";
+  document.getElementById("nav-tabs-bottom").classList.toggle("show");
+  document.getElementById("table-campo").classList.toggle("show");
+  document.getElementById("campo-alert").classList.toggle("hide");
+}
 function showModal() {
   document.getElementById("modal-show").classList.toggle("show");
 }
