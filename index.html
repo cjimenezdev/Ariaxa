@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ariaxa</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -36,7 +36,7 @@
                 /></a>
               </div>
               <div class="nav-mobile" id="nav-mobile">
-                <ul class="nav-bar">
+                <ol class="nav-bar">
                   <div class="nav-items">
                     <li class="nav-li active" onclick="openTab(event, 'Tab1')">
                       <a href="#"
@@ -59,7 +59,7 @@
                       ><i class="fa-solid fa-gear"></i> Configurar App</a
                     >
                   </li>
-                </ul>
+                </ol>
                 <div class="items-right">
                   <div class="items">
                     <a class="app" href="#"
@@ -90,77 +90,17 @@
       </header>
       <div class="content">
         <main class="main">
+          <!-- Section 1 -->
+
           <section
-            class="section section-tab justify-content-between h-100"
+            class="section section-tab align-items-stretch h-100"
             id="Tab1"
           >
-            <aside class="sidebar" id="sidebar">
-              <div class="sidebar-content">
-                <button class="btn-default" onclick="showModal();">
-                  <i class="fa-solid fa-plus"></i> Nueva tabla
-                </button>
-                <div class="input-group">
-                  <input
-                    class="search-input"
-                    type="search"
-                    name=""
-                    id=""
-                    placeholder="Buscar"
-                  />
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <span class="side-link">Mostrar todas las tablas</span>
-              </div>
-              <ul class="side-nav">
-                <li class="active">
-                  <a href="#"
-                    ><i class="fa-solid fa-address-card"></i> Perfiles</a
-                  >
-                </li>
-                <li>
-                  <a href="">Cars <i></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
-                </li>
-                <li>
-                  <a href="#"> <i></i> Cars</a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa-solid fa-bars-progress"></i> Projectos</a
-                  >
-                </li>
-              </ul>
-            </aside>
-            <div class="nav-bottom" id="nav-tabs-top">
-              <nav class="nav-tabs">
-                <ul class="navbar-tabs">
-                  <li class="active">
-                    <a href="">Campos <i></i></a>
-                  </li>
-                  <li>
-                    <a href="">Avanzado <i></i></a>
-                  </li>
-                </ul>
-                <div class="nav-tabs-item-right">
-                  <button type="button" class="btn-delete-table">
-                    Eliminar tabla <i class="fa-solid fa-trash-can"></i>
-                  </button>
-                </div>
-              </nav>
-            </div>
-            <div class="section-alert m-auto" id="section-alert">
-              <p class="m-0">
-                Comienza por crear una nueva tabla. Haz clic en el botón
-                <strong>Nueva Tabla</strong> de la izquierda.
-              </p>
-            </div>
-            <div class="section-content" id="section-content">
-              <aside class="sidebar">
+            <div>
+              <aside class="sidebar" id="sidebarTable">
                 <div class="sidebar-content">
-                  <button class="btn-default" onclick="showCampo();">
-                    <i class="fa-solid fa-plus"></i> Nuevo Campo
+                  <button class="btn-default" onclick="showModal();">
+                    <i class="fa-solid fa-plus"></i> Nueva tabla
                   </button>
                   <div class="input-group">
                     <input
@@ -172,76 +112,179 @@
                     />
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
-                  <span class="side-link">Mostrar todos los campos</span>
+                  <span class="side-link">Mostrar todas las tablas</span>
                 </div>
                 <ul class="side-nav">
                   <li class="active">
-                    <a href="#"><i class="fa-solid fa-id-badge"></i> Perfil</a>
+                    <a href="#"><i class="fa-solid fa-address-card"></i> Perfiles</a>
+                  </li>
+                  <li>
+                    <a href="">Cars <i></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-solid fa-users"></i> Usuarios</a>
+                  </li>
+                  <li>
+                    <a href="#"> <i></i> Cars</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-solid fa-bars-progress"></i> Projectos</a>
                   </li>
                 </ul>
               </aside>
-              <article class="sub-main">
-                <div class="campo-alert" id="campo-alert">
-                  <p>
-                    Comienza por crear un nuevo Campo. Haz clic en el botón
-                    <strong>Nuevo Campo</strong> de la izquierda.
-                  </p>
-                </div>
-                <div class="nav-bottom" id="nav-tabs-bottom">
-                  <nav class="nav-tabs">
-                    <ul class="navbar-tabs">
-                      <li class="active">
-                        <a href="">Configuración <i></i></a>
-                      </li>
-                      <li>
-                        <a href="">Avanzado <i></i></a>
-                      </li>
-                    </ul>
-                    <div class="nav-tabs-item-right">
-                      <button type="button" class="btn-delete-table">
-                        Eliminar campo <i class="fa-solid fa-trash-can"></i>
-                      </button>
+            </div>
+            <div class="w-100 m-auto d-flex flex-column">
+              <div class="nav-bottom" id="nav-tabs-top">
+                <nav class="nav-tabs">
+                  <ul class="navbar-tabs">
+                    <li class="active">
+                      <a href="">Campos <i></i></a>
+                    </li>
+                    <li>
+                      <a href="">Avanzado <i></i></a>
+                    </li>
+                  </ul>
+                  <div class="nav-tabs-item-right">
+                    <button type="button" class="btn-delete-table">
+                      Eliminar tabla <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </nav>
+              </div>
+              <div class="section-alert m-auto" id="section-alert">
+                <p class="m-0">
+                  Comienza por crear una nueva tabla. Haz clic en el botón
+                  <strong>Nueva Tabla</strong> de la izquierda.
+                </p>
+              </div>
+              <div class="section-content" id="section-content">
+                <aside class="sidebar">
+                  <div class="sidebar-content">
+                    <button class="btn-default" onclick="showCampo();">
+                      <i class="fa-solid fa-plus"></i> Nuevo Campo
+                    </button>
+                    <div class="input-group">
+                      <input
+                        class="search-input"
+                        type="search"
+                        name=""
+                        id=""
+                        placeholder="Buscar"
+                      />
+                      <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                  </nav>
-                </div>
-                <div class="form" id="table-campo">
-                  <form action="" class="form-campo">
-                    <div class="header-form">
-                      <p>Configuración del Campo</p>
-                      <div class="header-items">
-                        <span>table-id:</span>
-                        <span>field-id:</span>
-                        <button class="btn-delete-campo" type="submit">
-                          <i class="fa-solid fa-floppy-disk"></i> Guardar
+                    <span class="side-link">Mostrar todos los campos</span>
+                  </div>
+                  <ul class="side-nav">
+                    <li class="active">
+                      <a href="#"
+                        ><i class="fa-solid fa-id-badge"></i> Perfil</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+                <article class="sub-main">
+                  <div class="campo-alert" id="campo-alert">
+                    <p>
+                      Comienza por crear un nuevo Campo. Haz clic en el botón
+                      <strong>Nuevo Campo</strong> de la izquierda.
+                    </p>
+                  </div>
+                  <div class="nav-bottom" id="nav-tabs-bottom">
+                    <nav class="nav-tabs">
+                      <ul class="navbar-tabs">
+                        <li class="active">
+                          <a href="">Configuración <i></i></a>
+                        </li>
+                        <li>
+                          <a href="">Avanzado <i></i></a>
+                        </li>
+                      </ul>
+                      <div class="nav-tabs-item-right">
+                        <button type="button" class="btn-delete-table">
+                          Eliminar campo <i class="fa-solid fa-trash-can"></i>
                         </button>
                       </div>
-                    </div>
+                    </nav>
+                  </div>
+                  <div class="form" id="table-campo">
+                    <form action="" class="form-campo">
+                      <div class="header-form">
+                        <p>Configuración del Campo</p>
+                        <div class="header-items">
+                          <span>table-id:</span>
+                          <span>field-id:</span>
+                          <button class="btn-delete-campo" type="submit">
+                            <i class="fa-solid fa-floppy-disk"></i> Guardar
+                          </button>
+                        </div>
+                      </div>
+                      <div class="form-content">
+                        <div class="input-group-campo">
+                          <label for="">Nombre de Campo</label>
+                          <input type="text" placeholder="Perfil" />
+                        </div>
+                        <div class="input-group-campo">
+                          <label for="">Tipo de Campo</label>
+                          <input
+                            type="text"
+                            name=""
+                            placeholder="Linea de texto simple"
+                            disabled
+                          />
+                        </div>
+                        <div class="input-group-campo check">
+                          <label for="">Campo Obligatorio</label>
+                          <input class="check" type="checkbox" name="" id="" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </article>
+              </div>
+              <div class="modal-table" id="modal-show">
+                <div class="modal-table-show">
+                  <div class="modal-header">
+                    <h3><i class="fa-solid fa-plus"></i> Nueva tabla</h3>
+                    <button
+                      class="btn-header-exit"
+                      type="button"
+                      onclick="hideModal();"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <form action="">
                     <div class="form-content">
-                      <div class="input-group-campo">
-                        <label for="">Nombre de Campo</label>
-                        <input type="text" placeholder="Perfil" />
+                      <div class="input-group">
+                        <label for="">Nombre Tabla</label>
+                        <input type="text" />
                       </div>
-                      <div class="input-group-campo">
-                        <label for="">Tipo de Campo</label>
-                        <input
-                          type="text"
-                          name=""
-                          placeholder="Linea de texto simple"
-                          disabled
-                        />
-                      </div>
-                      <div class="input-group-campo check">
-                        <label for="">Campo Obligatorio</label>
-                        <input class="check" type="checkbox" name="" id="" />
-                      </div>
+                      <button
+                        class="btn-cancel-modal"
+                        type="button"
+                        onclick="hideModal();"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        class="btn-send-modal"
+                        type="button"
+                        onclick="showContent();"
+                      >
+                        Enviar
+                      </button>
                     </div>
                   </form>
                 </div>
-              </article>
+              </div>
             </div>
           </section>
+
+          <!-- Section 2 -->
+
           <section class="section-tab h-100" id="Tab2">
-            <aside class="sidebar" id="sidebar">
+            <aside class="sidebar" id="sidebarView">
               <div class="sidebar-content">
                 <button class="btn-default" onclick="showModal();">
                   <i class="fa-solid fa-plus"></i> Nueva tabla
@@ -723,6 +766,9 @@
               <i class="fas fa-angle-right"></i>
             </button>
           </section>
+
+          <!-- Section 3 -->
+
           <section class="section-tab h-100" id="Tab3">
             <aside class="sidebar" id="sidebar">
               <div class="sidebar-content">
@@ -749,7 +795,7 @@
                 </ul>
                 <span>Barras de registro</span>
                 <hr />
-                <button class="btn-default" onclick="showModal();">
+                <button class="btn-default" onclick="showModal3();">
                   <i class="fa-solid fa-plus"></i> Nueva barra de registro
                 </button>
                 <span class="side-link d-none">Mostrar todas las tablas</span>
@@ -759,17 +805,82 @@
                 <hr />
               </div>
             </aside>
+            <aside class="sidebar" id="asideView">
+              <div class="sidebar-content">
+                <button class="btn-default" onclick="showModalTab();">
+                  <i class="fa-solid fa-plus"></i> Nueva Pestaña
+                </button>
+              </div>
+              <ul class="side-nav ps-0">
+                <li class="active">
+                  <a href="#"><i class="fa-solid fa-id-badge"></i> Perfiles</a>
+                </li>
+              </ul>
+            </aside>
             <div
               class="section-alert m-auto p-4"
               style="background-color: orange"
-              id="section-alert"
+              id="section-alert3"
             >
               <p class="text-white m-0">
                 Debes crear una vista y adicionarle campos antes de crear una
                 pestaña.
               </p>
             </div>
-            <div class="modal-table" id="modal-show">
+            <div class="section d-block d-none" id="section3">
+              <div class="section-content h-100" id="section-content" style="display: flex;">
+              <article class="sub-main" style="display: block;">
+                <div class="nav-bottom show pt-4" id="nav-tabs-bottom">
+                  <nav class="nav-tabs ms-auto">
+                    <div class="nav-tabs-item-right w-100">
+                      <button type="button" class="btn-delete-table ms-auto d-flex align-items-baseline">
+                        <i class="fa-solid fa-trash-can text-danger me-2"></i>Eliminar barra de registro
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+                <div class="form show mt-3" id="table-campo">
+                  <form action="" class="form-campo">
+                    <div class="header-form">
+                      <p class="m-0">Configuración de la pestaña: <strong>Estudiante</strong></p>
+                      <div class="header-items">
+                        <button class="btn-delete-campo bg-transparent text-black-50" type="submit">
+                          <i class="fa-solid fa-trash-can text-danger"></i> Eliminar pestaña
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-content">
+                      <div class="input-group-campo">
+                        <label for="">Nombre de la pestaña</label>
+                        <input type="text" placeholder="Estudiante">
+                      </div>
+                      <div class="input-group-campo">
+                        <label for="">Vistas a mostrar</label>
+                        <div class="card w-100" style="height: 150px;">
+                          <div class="card-header">
+                            <span>Linea de vistas #1</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="w-100 d-flex justify-content-end align-items-center">
+                              <button class="btn-delete-campo bg-transparent" type="submit">
+                                <i class="fa-solid fa-plus"></i> Agregar nueva línea
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <button class="btn-delete-campo border-0 bg-transparent text-black mb-3 ms-0" type="submit">
+                        <i class="fa-solid fa-plus text-black-50"></i> Avanzado
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </article>
+            </div>
+            </div>
+            <div class="modal-table" id="modalShow3">
               <div class="modal-table-show">
                 <div class="modal-header">
                   <h3>
@@ -778,7 +889,7 @@
                   <button
                     class="btn-header-exit"
                     type="button"
-                    onclick="hideModal();"
+                    onclick="hideModal3();"
                   >
                     <i class="fa-solid fa-xmark"></i>
                   </button>
@@ -801,14 +912,50 @@
                     <button
                       class="btn-cancel-modal ms-auto"
                       type="button"
-                      onclick="hideModal();"
+                      onclick="hideModal3();"
                     >
                       Cancelar
                     </button>
                     <button
                       class="btn-send-modal"
                       type="button"
-                      onclick="showContent();"
+                      onclick="showContent3();"
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-table" id="modalTab3">
+              <div class="modal-table-show">
+                <div class="modal-header">
+                  <h3><i class="fa-solid fa-plus"></i> Nueva pestaña</h3>
+                  <button
+                    class="btn-header-exit"
+                    type="button"
+                    onclick="hideModalTab3();"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <form action="">
+                  <div class="form-content">
+                    <div class="input-group">
+                      <label for="">Nombre de la pestaña</label>
+                      <input type="text" />
+                    </div>
+                    <button
+                      class="btn-cancel-modal ms-auto"
+                      type="button"
+                      onclick="hideModalTab3();"
+                    >
+                      Cancelar
+                    </button>
+                    <button
+                      class="btn-send-modal"
+                      type="button"
+                      onclick="showContentTab3();"
                     >
                       Enviar
                     </button>
@@ -817,6 +964,9 @@
               </div>
             </div>
           </section>
+
+          <!-- Section 4 -->
+
           <section class="section-tab h-100" id="Tab4">
             <div class="d-flex flex-column w-100">
               <div class="nav-bottom d-block" id="nav-view-tabs-top">
@@ -893,92 +1043,161 @@
                   </div>
                 </div>
               </div>
-              <div
-                class="tab-content w-100 h-100 p-5"
-                id="tap-content"
-                style="display: block"
-              >
-                <div
-                  class="tab-pane fade active show"
-                  id="ex1-tabs-4"
-                  role="tabpanel"
-                  aria-labelledby="ex1-tab-4"
-                >
-                  <div class="row bg-white pt-5 pe-5">
-                    <div class="col-12 d-flex justify-content-end">
-                      <button class="btn-delete-campo" type="submit">
-                        <i class="fa-solid fa-floppy-disk"></i> Guardar
-                      </button>
-                    </div>
-                  </div>
-                  <div class="row bg-white p-5 pt-3">
-                    <div class="col-12 col-md-6">
-                      <div class="row">
-                        <div class="col-12 col-md-6">
-                          <label for="">Descripción de la vista</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            name=""
-                            id=""
-                            value="Vista nueva"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 mt-3 mt-md-0">
-                      <div class="row">
-                        <div class="col-12 col-md-6">
-                          <label for="">Título de la vista a mostrar</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                          <input
-                            type="text"
-                            class="form-control"
-                            name=""
-                            id=""
-                            value="Perfiles"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row pt-3">
+              <div class="tab-content w-100 h-100 p-5 pt-3 d-block" id="tap-content">
+                <div class="tab-pane fade active show" id="ex1-tabs-4" role="tabpanel" aria-labelledby="ex1-tab-4">
+                <div class="row">
+                  <div class="col-12 col-md-6 pe-md-4">
+                  <div class="row">
                     <div class="modal-table-show p-0">
                       <div class="modal-header bg-info">
                         <h6 class="m-0 fw-bold">
-                          Campos a mostrar en la vista
+                          <i class="fa-solid fa-minus me-2"></i> General
                         </h6>
-                        <p class="m-0">view id: <span>aswdwdwwd</span></p>
                       </div>
                       <div class="card">
                         <div class="card-body">
-                          <div class="row mt-4">
-                            <div class="col-4">
-                              <label for="">Descripción de la vista</label>
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-end mb-4">
+                                <button class="btn-delete-campo" type="submit">
+                                  <i class="fa-solid fa-floppy-disk"></i> Guardar
+                                </button>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">URL de la App</label>
                             </div>
                             <div class="col-8">
-                              <input type="text" class="form-control" />
+                              <div class="d-flex flex-row align-items-center">
+                                <span>https://ariaxa.com/</span><input value="App" type="text" class="form-control w-25" /><span>-demo</span>
+                              </div>
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                                  <label for="">Solo lectura</label>
+                                </div>
+                                <div class="col-8">
+                                  <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Tabla usuarios</label>
+                            </div>
+                            <div class="col-8">
+                              <input disabled placeholder="Usuarios" type="text" class="form-control" />
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Vista de inicio de sesión</label>
+                            </div>
+                            <div class="col-8">
+
+                                <div class="form-outline">
+                                  <input type="text" class="form-control">
+                                    <select class="w-100 h-100 m-0 ps-2 pe-2 position-absolute top-0" id="select" disabled>
+                                    <option value="1">Iniciar Sesion<i class="fa-solid fa-angle-down me-2"></i></option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">Four</option>
+                                    <option value="5">Five</option>
+                                    <option value="6">Six</option>
+                                    <option value="7">Seven</option>
+                                    <option value="8">Eight</option>
+                                  </select>
+                                </div>
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Vista edición de perfil</label>
+                            </div>
+                            <div class="col-8">
+                              <div class="form-outline">
+                                <input type="text" class="form-control">
+                                  <select class="w-100 h-100 m-0 ps-2 pe-2 position-absolute top-0" id="select">
+                                  <option value="1">Editar perfil <i class="fa-solid fa-angle-down"></i></option>
+                                  <option value="2">Default View - Usuarios</option>
+                                </select>
+                              </div>
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Ancho vista edición de perfil</label>
+                            </div>
+                            <div class="col-8">
+                              <div class="form-outline">
+                                <input type="text" class="form-control">
+                                  <select class="w-100 h-100 m-0 ps-2 pe-2 position-absolute top-0" id="select">
+                                  <option value="1">Porcentajes<i class="fa-solid fa-angle-down"></i></option>
+                                  <option value="2">Two</option>
+                                </select>
+                              </div>
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Formato fecha</label>
+                            </div>
+                            <div class="col-8">
+                              <div class="form-outline">
+                                <input type="text" class="form-control">
+                                  <select class="w-100 h-100 m-0 ps-2 pe-2 position-absolute top-0" id="select">
+                                  <option value="1">y-m-d <i class="fa-solid fa-angle-down"></i></option>
+                                  <option value="2">m-d-y</option>
+                                  <option value="3">d-m-y</option>
+                                </select>
+                              </div>
+                            </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                              <div class="row">
+                                <div class="col-4">
+                              <label for="">Separador de miles</label>
+                            </div>
+                            <div class="col-8">
+                              <div class="form-outline">
+                                <input type="text" class="form-control">
+                                  <select class="w-100 h-100 m-0 ps-2 pe-2 position-absolute top-0" id="select">
+                                  <option value="1">123,456.78 <i class="fa-solid fa-angle-down"></i></option>
+                                  <option value="2">Two</option>
+                                </select>
+                              </div>
+                            </div>
+                              </div>
                             </div>
                           </div>
+                          <button class=" bg-transparent border-0"><i class="fa-solid fa-angle-down me-2"></i> Avanzado</button>
+                          <hr>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="tab-pane fade"
-                  id="ex1-tabs-5"
-                  role="tabpanel"
-                  aria-labelledby="ex1-tab-5"
-                >
-                  <div
+                  <div class="col-12 col-md-6 ps-md-4 mt-4 mt-lg-0 p-0">
+                    <div
                     class="accordion accordion-flush"
                     id="accordionFlushExample"
                   >
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-4">
                       <h2 class="accordion-header" id="flush-headingOne">
                         <button
                           class="accordion-button collapsed"
@@ -988,7 +1207,7 @@
                           aria-expanded="false"
                           aria-controls="flush-collapseOne"
                         >
-                          Accordion Item #1
+                        <i class="fa-solid fa-plus me-2"></i> Seguridad
                         </button>
                       </h2>
                       <div
@@ -1013,7 +1232,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-4">
                       <h2 class="accordion-header" id="flush-headingTwo">
                         <button
                           class="accordion-button collapsed"
@@ -1023,7 +1242,7 @@
                           aria-expanded="false"
                           aria-controls="flush-collapseTwo"
                         >
-                          Accordion Item #2
+                        <i class="fa-solid fa-plus me-2"></i> Compartir App
                         </button>
                       </h2>
                       <div
@@ -1058,7 +1277,126 @@
                           aria-expanded="false"
                           aria-controls="flush-collapseThree"
                         >
-                          Accordion Item #3
+                        <i class="fa-solid fa-plus me-2"></i> Conexión Directorio Activo
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="ex1-tabs-5"
+                  role="tabpanel"
+                  aria-labelledby="ex1-tab-5"
+                >
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionFlushExample"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
+                        <i class="fa-solid fa-plus me-2"></i> Apariencia
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseTwo"
+                        >
+                        <i class="fa-solid fa-plus me-2"></i>Establecer las condiciones para el nombre y el icono de la App
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingTwo"
+                        data-mdb-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high
+                          life accusamus terry richardson ad squid. 3 wolf moon
+                          officia aute, non cupidatat skateboard dolor brunch.
+                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+                          wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et.
+                          Nihil anim keffiyeh helvetica, craft beer labore wes
+                          anderson cred nesciunt sapiente ea proident. Ad vegan
+                          excepteur butcher vice lomo. Leggings occaecat craft
+                          beer farm-to-table, raw denim aesthetic synth nesciunt
+                          you probably haven't heard of them accusamus labore
+                          sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-mdb-toggle="collapse"
+                          data-mdb-target="#flush-collapseThree"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseThree"
+                        >
+                        <i class="fa-solid fa-plus me-2"></i>CSS Personalizados
                         </button>
                       </h2>
                       <div
@@ -1106,44 +1444,9 @@
                 </div>
               </div>
             </div>
+            </div>
           </section>
         </main>
-      </div>
-      <div class="modal-table" id="modal-show">
-        <div class="modal-table-show">
-          <div class="modal-header">
-            <h3><i class="fa-solid fa-plus"></i> Nueva tabla</h3>
-            <button
-              class="btn-header-exit"
-              type="button"
-              onclick="hideModal();"
-            >
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-          </div>
-          <form action="">
-            <div class="form-content">
-              <div class="input-group">
-                <label for="">Nombre Tabla</label>
-                <input type="text" />
-              </div>
-              <button
-                class="btn-cancel-modal"
-                type="button"
-                onclick="hideModal();"
-              >
-                Cancelar
-              </button>
-              <button
-                class="btn-send-modal"
-                type="button"
-                onclick="showContent();"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
     <script src="./js/jquery-3.6.1.js"></script>
